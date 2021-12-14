@@ -23,8 +23,7 @@
             <h1> Contact </h1>
             <p>We are always glad to hear from you!</p>
             <p>
-                <a href="mailto:aidan36andjp32@gmail.com">Send us an email</a>
-               or leave a message.
+		    <a href="mailto:aidan36andjp32@gmail.com">Send us an email</a>or leave a message.
             </p> 
             <div id="log">
             <form id="order" name= "order" action="orderConfirmation.html" onsubmit="return validateOrder()" >
@@ -38,12 +37,10 @@
 		    </tr>
                     <tr>
                         <td><b> Email </b></td>
+			<td><input type="email" id="email" name="email" required placeholder="Enter your Email" onchange="validateEmail(document.order.email.value)"/> </td>
                     </tr>
                     <tr>
-                        <td><input type="email" id="email" name="email" required placeholder="Enter your Email" onchange="validateEmail(document.order.email.value)"/> </td>
-                    </tr>
-                    <tr>
-			<td>Comments:</td>
+			<td>Message:</td>
 			<td> <textarea rows="7" cols="62"></textarea>
 		    </tr>	
                 </table>
