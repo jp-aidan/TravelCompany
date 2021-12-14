@@ -23,9 +23,46 @@
             <h1> Contact </h1>
             <p>We are always glad to hear from you!</p>
             <p>
-                <a href="mailto:example@bethanystoursshop.com?subject=I'd%20love%20tours">Send us an email</a>
-                and let us know how we can help make your occasion special.
+                <a href="mailto:aidan36andjp32@gmail.com">Send us an email</a>
+               or leave a message.
             </p> 
+            <div id="log">
+            <form id="order" name= "order" action="orderConfirmation.html" onsubmit="return validateOrder()" >
+                <table>
+                    <tr>
+                        <th> Leave us a message </th>
+                    </tr>
+                    <tr>
+						<td>Name:</td> 
+						<td><input type="text" size="60"/></td>
+					</tr>
+                    <tr>
+                        <td><b> Email </b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" id="email" name="email" required placeholder="Enter your Email" onchange="validateEmail(document.order.email.value)"/> </td>
+                    </tr>
+                    <tr>
+						<td>Comments:</td>
+						<td> <textarea rows="7" cols="62"></textarea>
+					</tr>	
+                </table>
+                <input type="submit" id="submit" value="Submit" >
+                <input type="hidden" name="discountPercentage" value="0" >
+            </form>
+        </div>
+        <div id="content">
+			<div id="image">
+                <img src="Orderimage.jpg" class="banner" alt="Yummy" />
+            </div>
+			<div id="text">
+				<h2>You are one step away from your burrito</h2>
+				<p class="sub-title">Just a few details to place your order</p>
+                <p class="sub-title">Muy Loco: This month we are giving a superdiscount!
+                    Use the code "mextexgood" and check it out!
+                </p>
+			</div>
+        </div>
         </article>
     </main>
     <footer>
