@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="site.css" type="text/css" />
-    <title>Book | Ireland Luxury Tours</title>
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+    <script src = "JavaScript/scriptTravelCompany.js"></script>
+    <title>Booking | C&C Tours</title>
     <style>
 
         @media only screen and (min-width: 768px) {
@@ -36,11 +37,7 @@
             cursor: pointer;
         }
 
-        input[type="submit"] {
-            border: solid 1px #999;
-            border-radius: 3px;
-            padding: 10px;
-        }
+       
     </style>
 </head>
 <body>
@@ -60,7 +57,8 @@
             <br/>
             <br/>
             <br/>
-            <button id="indexButton" onclick="location.href='tours2.html'">View Tours</button></aside>
+            <button class="indexButton" onclick="location.href='tours.html'">View Tours</button>
+        </aside>
         <article>
           <h1>Booking</h1>
 
@@ -73,29 +71,34 @@
               <p class= "desc"></p>
           </div>
 
-          <form action="http://localhost:7071/api/post" method="POST">
+          <form name="book" id="book"action="" onsubmit="validateName(document.book.firstName.value, document.book.lastName.value); dateFill(document.book.date.value)" method="POST">
             <input type="hidden" id="tours-book" name="tours-book">
             <input type="hidden" id="location" name="location">
 
             <div class="input-group">
-                <div><label for="first-name">First Name</label></div>
-                <div><input type="text" name="first-name" id= "first-name" /></div>
+                <div><label for="date">Select date</label></div>
+                <div><input type="date" name="date" id= "date" onchange=""/></div>
             </div>
 
             <div class="input-group">
-                <div><label for="last-name">Last Name</label></div>
-                <div><input type="text" name="last-name" id= "last-name" /></div>
+                <div><label for="firstName">First Name</label></div>
+                <div><input type="text" name="firstName" id= "firstName" /></div>
             </div>
 
             <div class="input-group">
+                <div><label for="lastName">Last Name</label></div>
+                <div><input type="text" name="lastName" id= "lastName" /></div>
+            </div>
+
+            <div class="input-group" onchange="validadeAddress(document.book.address.value)">
                 <div><label for="address">Address</label></div>
-                <div><input type="text" name="address" id= "address" /></div>
+                <div><input type="text" name="address" id= "address"/></div>
             </div>
 
             <div class="input-group">
                 <div><label for="state">State</label></div>
                 <div>
-                    <select name="state" id="state">
+                    <select name="state" id="state" required>
                         <option value="selected">[Select one]</option>
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -107,8 +110,8 @@
             </div>
 
             <div class="input-group">
-                <div><label for="postal-code">Postal code</label></div>
-                <div><input type="text" name="postal-code" id= "postal-code" /></div>
+                <div><label for="postalCode">Postal code</label></div>
+                <div><input type="text" name="postalCode" id= "postalCode" onchange="validatePostalCode(document.book.postalCode.value)"/></div>
             </div>
 
             <div class="input-group">
@@ -124,18 +127,15 @@
             </div>
 
             <input type="reset" value="Reset"/>
-            <input type="submit" value="Book"/>
+            <input type="submit" class="indexButton" value="Book"/>
         </form>  
         </article>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </footer>
+        <footer>
+            <p id="copyright">
+                Copyright &copy; of C&C Tours
+            </p>
+        </footer>
 </body>
 <script>
     window.addEventListener("DOMContentLoaded", function(e) {
@@ -147,7 +147,7 @@
             longitude: "unknown"
         };
 
-        window.navigator.geolocation.getCurrentPosition(
+       /* window.navigator.geolocation.getCurrentPosition(
             function(position) {
                 location = {
                     latitude: position.coords.latitude,
@@ -158,7 +158,7 @@
             },
             function(error) {
                 locationBox.value = JSON.stringfy(location);
-            });
+            }); */
 
         const book = localStorage.getItem("book");
 

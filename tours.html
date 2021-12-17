@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="site.css" type="text/css" />
-    <title>Tours | Ireland Luxury Tours</title>
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+    <title>Tours | C&C Tours</title>
 </head>
 <body>
     <header>
@@ -18,7 +18,13 @@
         </nav>
     </header>
     <main>
-        <aside><img src="images/logo.png" alt="Ireland Luxury Tours"></aside>
+        <aside><img src="images/C&C_Logo4.jpg" alt="C&Ctours">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <button class="indexButton" onclick="location.href='tours.html'">View Tours</button>
+        </aside>
         <article>
             <h1>Tours</h1>
             <section class="columns-desktop">
@@ -26,75 +32,45 @@
                     <img src="images/cashel.jpg" alt="Rock of Cashel" />
                     <div class="columns">
                         <div class="title">3 day tour</div>
-                        <div class="price">12.95</div>
+                        <div class="price">€1,899</div>
                 </div>
                 <p class="desc">South of Ireland</p>
-                <button data-book="cashel">Book Now</button>
+                <button data-book="cashel" onclick="location.href='3DayTour.html'">View Tour</button>
                 </div>
                 <div class="tours">
                     <img src="images/rosscastle.jpg" alt="Ross Castle" />
                     <div class="columns">
                         <div class="title">5 day tour</div>
-                        <div class="price">15.95</div>
+                        <div class="price">€2,499</div>
                 </div>
                 <p class="desc">Killarney</p>
-                <button data-book="rosscastle">Book Now</button>
+                <button data-book="rosscastle" onclick="location.href='5DayTour.html'">View Tour</button>
                 </div>
                 <div class="tours">
                     <img src="images/hapenny.jpg" alt="Ha'penny Bridge" />
                     <div class="columns">
                         <div class="title">7 day tour</div>
-                        <div class="price">12.95</div>
+                        <div class="price">€3,199</div>
                 </div>
                 <p class="desc">Temple Bar</p>
-                <button data-book="hapenny">Book Now</button>
+                <button data-book="hapenny" onclick="location.href='7DayTour.html'">View Tour</button>
                 </div>
                 <div class="tours">
                     <img src="images/kylemore.jpg" alt="Kylemore Abbey" />
                     <div class="columns">
                         <div class="title">10 day tour</div>
-                        <div class="price">12.95</div>
+                        <div class="price">€3,999</div>
                 </div>
                 <p class="desc">Kylemore Abbey</p>
-                <button data-book="kylemore">Book Now</button>
+                <button data-book="kylemore" onclick="location.href='10DayTour.html'">View Tour</button>
                 </div>    
             </section>
         </article>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="tours.html"></a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </footer>
+        <footer>
+            <p id="copyright">
+                Copyright &copy; of C&C Tours
+            </p>
+        </footer>
 </body>
-<script>
-    window.addEventListener("DOMContentLoaded", function(e) {
-        const orderButtons = document.querySelectorAll("button[data-book]");
-
-        orderButtons.forEach(function(button) {
-
-            button.addEventListener("click", function(e) {
-                const button = e.currentTarget;
-                const container = button.parentNode;
-
-                const book = {
-                    id: button.getAttribute("data-book"),
-                    title: container.querySelector(".title").innerText,
-                    price: container.querySelector(".price").innerText,
-                    desc: container.querySelector(".desc").innerText
-                };
-
-                localStorage.setItem("book", JSON.stringify(book));
-
-                const url = window.location.href.replace("tours.html", "book.html");
-                window.location.href = url;
-
-            });
-        });
-    });
-</script>
 </html>
