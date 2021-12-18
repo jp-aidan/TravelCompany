@@ -22,14 +22,13 @@ header {
     top: 0;
     left: 0;
     width:100%;
-    background-color: #022328;
+    background-color: #202e48;
     padding: 10px;
 }
 
 nav a:visited,
 nav a:link {
-	color: yellow;
-    #color: #a17e2d;
+    color: #D6AC56;
     text-decoration: none;
 }
 
@@ -54,7 +53,10 @@ main {
 
 footer {
     padding: 15px;
-    background-color: #a17e2d;
+    background-color: #A17E2D;
+    text-align: center;
+    color: white;
+    width: 100%;
 }
 
 aside,
@@ -73,8 +75,7 @@ article {
 .columns {
     display: flex;
 }
-
-/*for responsive page */
+/*to make it responsive*/
 @media only screen and (min-width: 768px) {
 
     main {
@@ -90,8 +91,7 @@ article {
     }
 }
 
-
-/* tours */
+/* tours page style*/
 
 .tours {
     width: 200px;
@@ -121,15 +121,18 @@ article {
     width: 50%;
 }
 
-.tours button {
+/*buttons*/
+.tours button 
+{
     background-color: #cf2b04;
     padding: 10px;
     border: solid 1px #cf2b04;
     border-radius: 3px;
     color: #fff;
+    cursor: pointer;
 }
 
-#indexButton 
+.indexButton 
 {
     background-color: #cf2b04;
     padding: 10px;
@@ -137,5 +140,5 @@ article {
     border-radius: 3px;
     color: #fff;
     clear: both;
+    cursor: pointer;
 }
-© 2021 GitHub, Inc.
