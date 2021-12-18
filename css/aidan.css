@@ -22,13 +22,13 @@ header {
     top: 0;
     left: 0;
     width:100%;
-    background-color: light-blue;
+    background-color: green;
     padding: 10px;
 }
 
 nav a:visited,
 nav a:link {
-    color: gold;
+    color: red;
     text-decoration: none;
 }
 
