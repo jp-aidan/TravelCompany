@@ -71,7 +71,7 @@
               <p class= "desc"></p>
           </div>
 
-          <form name="book" id="book" action="https://formspree.io/f/mqknkoeb" onsubmit="validateName(document.book.firstName.value, document.book.lastName.value); dateFill(document.book.date.value)" method="POST">
+          <form name="book" id="book" action="https://formspree.io/f/mqknkoeb" onsubmit=" return validateName(document.book.firstName.value, document.book.lastName.value); return dateFill(document.book.date.value)" method="POST">
             <input type="hidden" id="tours-book" name="tours-book">
             <input type="hidden" id="location" name="location">
 
