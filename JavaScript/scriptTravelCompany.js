@@ -47,12 +47,8 @@ function validateName(firstName, lastName)
 function nameIsAlphabetical (firstName, lastName)
 {
 	var alphabet = /^[a-zA-Z]+$/;
-	if (firstName.test(alphabet))
-	{	if (lastName.test(alphabet))
-		{
-			return true;
-		}
-		else 
+	if (!alphabet.test(firstName))
+	{	if (!alphabet.test(lastName))
 		{
 			alert('Names must be alphabetical only');
 			return false;
