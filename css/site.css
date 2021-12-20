@@ -83,8 +83,8 @@ article {
 }
 @media only screen and (min-width: 768px) {
 
-    article {
-        min-width: 350px;
+    #bookform {
+        width: 350px;
      }
 
     main {
