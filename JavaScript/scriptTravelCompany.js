@@ -125,8 +125,10 @@ We wont use it probably
 
 
 //return validateName(document.book.firstName.value, document.book.lastName.value); return dateFill(document.book.date.value)"
-function validateBookForm (firstName, lastName, date)
+function validateBookForm (firstName, lastName, date, address, postalCode)
 {
 	return validateName(firstName, lastName)
-		&& dateFill(date);
+		&& dateFill(date)
+		&& validateAddress(address)
+		&& validatePostalCode(postalCode);
 }
