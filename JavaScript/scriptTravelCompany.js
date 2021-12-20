@@ -90,6 +90,13 @@ function validateAddress (address)
 
 }
 
+//return validateName(document.book.firstName.value, document.book.lastName.value); return dateFill(document.book.date.value)"
+function validateBookForm (firstName, lastName, date)
+{
+	return validateName(firstName, lastName)
+		&& dateFill(date);
+}
+
 /*JSON tours page to bring the information together when booking the trip
 We wont use it probably
 <script>
