@@ -106,9 +106,9 @@ function addressNotEmpty(address, postalCode)
 //Function to validate that fields must be filled
 function validateBookForm (firstName, lastName, date, address, postalCode)
 {
-	return validateName(firstName, lastName)
-		&& dateFill(date)
+	return dateFill(date)
+		&& validateName(firstName, lastName)
+		&& addressNotEmpty(address, postalCode)
 		&& validateAddress(address)
-		&& validatePostalCode(postalCode)
-		&& addressNotEmpty(address, postalCode);
+		&& validatePostalCode(postalCode);
 }
