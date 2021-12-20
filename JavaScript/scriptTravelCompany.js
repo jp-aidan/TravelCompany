@@ -67,15 +67,10 @@ function nameIsAlphabetical (firstName, lastName)
 function validatePostalCode(postalCode)
 {
 	var numericExpression = /^[0-9]+$/;
-	if (postalCode.test(numericExpression))
-	{
-		return true;
-	} 
-	else 
+	if (!numericExpression.test(postalCode))
 	{
 		alert('Postal code uses Numbers only');
 		return false;
-		
 	}
 
 	return true;
@@ -85,18 +80,13 @@ function validatePostalCode(postalCode)
 function validateAddress (address)
 {
 	var alphaNum = /^[0-9a-zA-Z]+$/;
-	if (address.test(alphaNum))
-	{
-		return true;
-	} 
-	else 
+	if (!alphaNum.test(address))
 	{
 		alert('Address not valid');
 		return false;
 	}
 
 	return true;
-
 }
 
 
