@@ -159,8 +159,8 @@ h1 {
 /*Booking page responsive and styling*/
 
 @media only screen and (min-width: 768px) {
-    article {
-        width: 100%;
+#bookpage {
+        width: 350px;
     }
 }
 .input-group{
