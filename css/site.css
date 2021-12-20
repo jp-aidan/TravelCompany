@@ -76,6 +76,11 @@ article {
     display: flex;
 }
 /*to make it responsive*/
+
+.banner {
+    display: flex;
+    max-width: 100%;
+}
 @media only screen and (min-width: 768px) {
 
     main {
@@ -95,10 +100,7 @@ article {
         margin-top: 0.5em;
     }
 
-    .banner {
-        display: flex;
-        max-width: 100%;
-    }
+    
 
     .sub-title {
         background-color: #fff;
