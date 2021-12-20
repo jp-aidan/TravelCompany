@@ -96,7 +96,7 @@ function addressNotEmpty(address, postalCode)
 
 	if(postalCode == "" || postalCode == null)
 	{
-		alert('Please fill in postal code with number');
+		alert('Please fill in postal code with numbers only');
 		return false;
 	}
 
