@@ -64,7 +64,7 @@ function nameIsAlphabetical (firstName, lastName)
 
 
 //Zipcode validation (USA standard) still not working
-function validadePostalCode(postalCode)
+function validatePostalCode(postalCode)
 {
 	var numericExpression = /^[0-9]+$/;
 	if (postalCode.match(numericExpression))
