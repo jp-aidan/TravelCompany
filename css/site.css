@@ -62,9 +62,13 @@ main {
 footer {
     padding: 15px;
     background-color: #A17E2D;
-    text-align: center;
     color: white;
     width: 100%;
+}
+
+#copyright
+{
+    text-align: center;
 }
 
 aside,
