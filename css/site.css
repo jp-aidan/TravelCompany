@@ -147,6 +147,7 @@ article {
 @font-face {
     font-family: 'celtic';
     src: url(fonts/Celtic.ttf);
+    font-style: normal;
     font-weight: 200;
 }
 
@@ -154,3 +155,35 @@ h1 {
     font-family: celtic;
     font-weight: 200;
 }
+
+/*Booking page responsive and styling*/
+
+@media only screen and (min-width: 768px) {
+    article {
+        width: 350px;
+    }
+}
+.input-group{
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+    padding: 10px;
+    border: solid 1px #999;
+    border-radius: 2px;
+    width: 100%;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="reset"] {
+    background: transparent;
+    border: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
