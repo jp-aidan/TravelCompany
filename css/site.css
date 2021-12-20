@@ -16,6 +16,12 @@ p {
     margin: 0.5em 0 0.5em 0;
 }
 
+.about
+{
+    margin: 0.5em 0 0.5em 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 header {
     display: block;
     position: fixed;
