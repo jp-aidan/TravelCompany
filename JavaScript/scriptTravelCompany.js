@@ -144,5 +144,6 @@ function validateBookForm (firstName, lastName, date, address, postalCode)
 	return validateName(firstName, lastName)
 		&& dateFill(date)
 		&& validateAddress(address)
-		&& validatePostalCode(postalCode);
+		&& validatePostalCode(postalCode)
+		&& addressNotEmpty(address, postalCode);
 }
