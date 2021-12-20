@@ -103,42 +103,7 @@ function addressNotEmpty(address, postalCode)
 	return true;
 }
 
-
-/*JSON tours page to bring the information together when booking the trip
-We wont use it probably
-<script>
-    window.addEventListener("DOMContentLoaded", function(e) {
-        const orderButtons = document.querySelectorAll("button[data-book]");
-
-        orderButtons.forEach(function(button) {
-
-            button.addEventListener("click", function(e) {
-                const button = e.currentTarget;
-                const container = button.parentNode;
-
-                const book = {
-                    id: button.getAttribute("data-book"),
-                    title: container.querySelector(".title").innerText,
-                    price: container.querySelector(".price").innerText,
-                    desc: container.querySelector(".desc").innerText
-                };
-
-                localStorage.setItem("book", JSON.stringify(book));
-
-                const url = window.location.href.replace("tours.html", "book.html");
-                window.location.href = url;
-
-            });
-        });
-    });
-</script>*/
-
-
-
-
-
-
-//return validateName(document.book.firstName.value, document.book.lastName.value); return dateFill(document.book.date.value)"
+//Function to validate that fields must be filled
 function validateBookForm (firstName, lastName, date, address, postalCode)
 {
 	return validateName(firstName, lastName)
