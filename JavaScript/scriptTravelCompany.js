@@ -15,10 +15,18 @@ function validateEmail(email)
 }
 
 //Booking page validation
-function dateFill(date)
+function validateDate(date)
 {
 	if (date == "" || date == null){
 		alert('Please fill in the date');
+		return false;
+	}
+	var parsedDate = new Date(date);
+	var today = new Date();
+
+	if(parsedDate < today) 
+	{
+		alert('Date must be today onwards');
 		return false;
 	}
 
@@ -59,8 +67,8 @@ function nameIsAlphabetical (firstName, lastName)
 }
 
 
-//Zipcode validation (USA standard) still not working
-function validatePostalCode(postalCode)
+//Zipcode validation (USA standard)
+function validatePostalCode (postalCode)
 {
 	var numericExpression = /^[0-9]+$/;
 	if (!numericExpression.test(postalCode))
@@ -72,7 +80,7 @@ function validatePostalCode(postalCode)
 	return true;
 }
 
-//Adress validator for alphaNumeric still not working
+//Adress validator for alphaNumeric 
 function validateAddress (address)
 {
 	var alphaNum = /^[a-zA-Z0-9\s,'-]*$/;
@@ -106,7 +114,7 @@ function addressNotEmpty(address, postalCode)
 //Function to validate that fields must be filled
 function validateBookForm (firstName, lastName, date, address, postalCode)
 {
-	return dateFill(date)
+	return validateDate(date)
 		&& validateName(firstName, lastName)
 		&& addressNotEmpty(address, postalCode)
 		&& validateAddress(address)
