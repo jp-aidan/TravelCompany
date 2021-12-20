@@ -47,8 +47,8 @@ function validateName(firstName, lastName)
 function nameIsAlphabetical (firstName, lastName)
 {
 	var alphabet = /^[a-zA-Z]+$/;
-	if (firstName.match(alphabet))
-	{	if (lastName.match(alphabet))
+	if (firstName.test(alphabet))
+	{	if (lastName.test(alphabet))
 		{
 			return true;
 		}
@@ -67,7 +67,7 @@ function nameIsAlphabetical (firstName, lastName)
 function validatePostalCode(postalCode)
 {
 	var numericExpression = /^[0-9]+$/;
-	if (postalCode.match(numericExpression))
+	if (postalCode.test(numericExpression))
 	{
 		return true;
 	} 
@@ -85,7 +85,7 @@ function validatePostalCode(postalCode)
 function validateAddress (address)
 {
 	var alphaNum = /^[0-9a-zA-Z]+$/;
-	if (address.match(alphaNum))
+	if (address.test(alphaNum))
 	{
 		return true;
 	} 
