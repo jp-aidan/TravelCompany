@@ -142,3 +142,16 @@ article {
     clear: both;
     cursor: pointer;
 }
+
+/*font*/
+@font-face {
+    font-family: 'celtic';
+    src: url(fonts/Celtic.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+h1 {
+    font-family: celtic;
+    font-weight: 100;
+}
