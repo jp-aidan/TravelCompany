@@ -79,7 +79,7 @@ function validatePostalCode(postalCode)
 //Adress validator for alphaNumeric still not working
 function validateAddress (address)
 {
-	var alphaNum = /^[0-9a-zA-Z]+$/;
+	var alphaNum = /^[a-zA-Z0-9\s,'-]*$/;
 	if (!alphaNum.test(address))
 	{
 		alert('Address not valid');
