@@ -148,10 +148,10 @@ article {
     font-family: 'celtic';
     src: url(fonts/Celtic.ttf);
     font-style: normal;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 h1 {
     font-family: celtic;
-    font-weight: 100;
+    font-weight: 200;
 }
