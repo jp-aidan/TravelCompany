@@ -103,14 +103,60 @@ article {
         font-size: 3em;
         margin-top: 0.5em;
     }
-
-    
-
+  
     .sub-title {
         background-color: #fff;
         font-size: 1.5em;
         padding: 10px;
     }
+    /*Style booking page*/
+        .input-group{
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select{
+            padding: 10px;
+            border: solid 1px #999;
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input[type="reset"] {
+            background: transparent;
+            border: 0;
+            text-decoration: underline;
+            cursor: pointer;
+
+        }
+        .input-group{
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select{
+            padding: 10px;
+            border: solid 1px #999;
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input[type="reset"] {
+            background: transparent;
+            border: 0;
+            text-decoration: underline;
+            cursor: pointer;
+        }
 }
 
 /* tours page style*/
@@ -178,4 +224,4 @@ h1 {
     font-weight: 200;
 }
 
-/*Index page styling*/
+
