@@ -31,7 +31,7 @@
         </aside>
         <article id="bookform">
           <h1>Booking</h1>
-
+            <!--HTML elements to show the tours the same mark up on tours page-->
           <div class="tours">
               <img src=""/>
               <div class="columns">
@@ -42,8 +42,10 @@
           </div>
 
           <form name="book" id="book" action="https://formspree.io/f/mqknkoeb" onsubmit=" return validateBookForm(document.book.firstName.value, document.book.lastName.value, document.book.date.value, document.book.address.value, document.book.postalCode.value);" method="POST">
+            <!--field to take in the book information and send to the server-->
             <input type="hidden" id="tours-book" name="tours-book">
-            <input type="hidden" id="location" name="location">
+            <!--field to take the location and send to the server-->
+            <!--<input type="hidden" id="location" name="location">-->
 
             <div class="input-group">
                 <div><label for="date">Select date</label></div>
@@ -99,8 +101,10 @@
         </footer>
 </body>
 <script>
+    //Add event so Js run in the page after elements are loaded
     window.addEventListener("DOMContentLoaded", function(e) {
 
+        /*getter for the reference location, we decided not to use it because it didnt add much
         let locationBox = document.querySelector("#location");
 
         let location = {
@@ -108,8 +112,6 @@
             longitude: "unknown"
         };
 
-       /* 
-       We decided not to go with the location got purposes of making the website easier to use
        window.navigator.geolocation.getCurrentPosition(
             function(position) {
                 location = {
@@ -125,23 +127,25 @@
 
         //Getter for the information from the tour pages
         const book = localStorage.getItem("book");
-
+        //code that execute only if data is storaged
         if (book) {
+            //turn the string into an object
             const toursBook = JSON.parse(book);
-
+            //reference to the hidden input element
             const bookInput = document.querySelector("#tours-book");
+            //gets the string and sets it equal to the input value
             bookInput.value = book;
-            
+            //line used to get reference for the container on this page
             const tours = document.querySelector(".tours");
-
+            //get the data and show it to the user
             const title = tours.querySelector(".title");
             const price = tours.querySelector(".price");
             const desc = tours.querySelector(".desc");
-
+            //update the inner text with the appropriate property
             title.innerText = toursBook.title;
             price.innerText = toursBook.price;
             desc.innerText = toursBook.desc;
-
+            //show the appropriate image and title on this page
             const img = tours.querySelector("img");
             img.setAttribute("src", `images/${toursBook.id}.jpg`);
             img.setAttribute("alt", toursBook.title);

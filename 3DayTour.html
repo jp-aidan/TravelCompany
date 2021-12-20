@@ -106,27 +106,31 @@
     </footer>
 </body>
 <script>
-    //Add event so Js run in the page as it is loaded
+    //Add event so Js run in the page after elements are loaded
     window.addEventListener("DOMContentLoaded", function(e) {
         //use data button to store information from the tours
         const tourButtons = document.querySelectorAll("button[data-book]");
         //loop to work with each of the buttons(it was used when we had 4 tours on the same page)
         tourButtons.forEach(function(button) {
-            //handler for the information that's gonna be selected through the buttons
+            //handler for the information that's gonna be selected through the buttons, tells that for eavhe button
+            //we want to run some JS
+            //e is the event argument for current target
             button.addEventListener("click", function(e) {
                 const button = e.currentTarget;
-                const container = button.parentNode;//where the information will be taken from
-                //build object to store information about the selected item
+                const container = button.parentNode;//container where the information will be taken from
+                //build object to store information about the selected item and create properties
                 const book = {
                     id: button.getAttribute("data-book"),
+                    //query selector used against the parent container and look for the inner text and get the data
                     title: container.querySelector(".title").innerText,
                     price: container.querySelector(".price").innerText,
                     desc: container.querySelector(".desc").innerText
                 };
-                //were the items are stored
+                //were the items are stored and convert into a string
                 localStorage.setItem("book", JSON.stringify(book));
                 //code to substitute this page for the booking one
                 const url = window.location.href.replace("3DayTour.html", "book.html");
+                //set browser to the new URL
                 window.location.href = url;
 
             });
