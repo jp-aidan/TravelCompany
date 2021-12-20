@@ -86,7 +86,7 @@ function validateAddress (address)
 }
 
 //Address abd zipcode fields check
-function validateName(address, postalCode)
+function addressNotEmpty(address, postalCode)
 {
 	if (address == "" || address == null)
 	{
