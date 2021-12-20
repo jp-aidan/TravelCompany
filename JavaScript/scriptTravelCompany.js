@@ -17,10 +17,12 @@ function validateEmail(email)
 //Booking page validation
 function dateFill(date)
 {
-	if (date == ""){
+	if (date == "" || date == null){
 		alert('Please fill in the date');
 		return false;
 	}
+
+	return true;
 }
 
 //Name fields validation
@@ -37,7 +39,8 @@ function validateName(firstName, lastName)
 		alert('Last name cannot be empty');
 		return false;
 	}
-	
+
+	return true;
 }
 
 //Only accept alphabetical for name
@@ -55,6 +58,8 @@ function nameIsAlphabetical (firstName, lastName)
 			return false;
 		}
 	}
+
+	return true;
 }
 
 
@@ -72,6 +77,8 @@ function validadePostalCode(postalCode)
 		return false;
 		
 	}
+
+	return true;
 }
 
 //Adress validator for alphaNumeric still not working
@@ -88,14 +95,10 @@ function validateAddress (address)
 		return false;
 	}
 
+	return true;
+
 }
 
-//return validateName(document.book.firstName.value, document.book.lastName.value); return dateFill(document.book.date.value)"
-function validateBookForm (firstName, lastName, date)
-{
-	return validateName(firstName, lastName)
-		&& dateFill(date);
-}
 
 /*JSON tours page to bring the information together when booking the trip
 We wont use it probably
@@ -125,3 +128,15 @@ We wont use it probably
         });
     });
 </script>*/
+
+
+
+
+
+
+//return validateName(document.book.firstName.value, document.book.lastName.value); return dateFill(document.book.date.value)"
+function validateBookForm (firstName, lastName, date)
+{
+	return validateName(firstName, lastName)
+		&& dateFill(date);
+}
