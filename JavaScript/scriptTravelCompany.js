@@ -85,6 +85,24 @@ function validateAddress (address)
 	return true;
 }
 
+//Address abd zipcode fields check
+function validateName(address, postalCode)
+{
+	if (address == "" || address == null)
+	{
+		alert('Please fill in the Address');
+		return false;
+	}
+
+	if(postalCode == "" || postalCode == null)
+	{
+		alert('Please fill in postal code with number');
+		return false;
+	}
+
+	return true;
+}
+
 
 /*JSON tours page to bring the information together when booking the trip
 We wont use it probably
