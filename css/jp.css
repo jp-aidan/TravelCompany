@@ -11,7 +11,7 @@ body
 body 
 {
    font-family: cursive;
-   background-color: rgba(0, 119, 139, 0.301);
+   background-image: url("images/ireland.jpg");
    
 }
 
@@ -57,7 +57,6 @@ nav > ul > li
 main 
 {
     display: block;
-    background-color: rgba(34, 146, 122, 0.24);
     padding-top: 3em;
     padding-bottom: 3em;
     min-height: 85%;
