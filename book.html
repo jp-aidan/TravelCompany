@@ -100,9 +100,7 @@
         </footer>
 </body>
 <script>
-    //Add event so Js run in the page after elements are loaded
-    window.addEventListener("DOMContentLoaded", function(e) {
-
+   
         /*getter for the reference location, we decided not to use it because it didnt add much
         let locationBox = document.querySelector("#location");
 
@@ -123,6 +121,9 @@
             function(error) {
                 locationBox.value = JSON.stringfy(location);
             }); */
+
+         //Add event so Js run in the page after elements are loaded
+        window.addEventListener("DOMContentLoaded", function(e) {
 
         //Getter for the information from the tour pages
         const book = localStorage.getItem("book");
