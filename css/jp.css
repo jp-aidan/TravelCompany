@@ -11,8 +11,8 @@ body
 body 
 {
    font-family: cursive;
-  
-   background-image: url("images/background.jfif");
+   background-color: #fff;
+   
 }
 
 p 
@@ -55,7 +55,7 @@ nav > ul > li
 main 
 {
     display: block;
-    
+    background-image: url("images/ireland.jfif");
     padding-top: 3em;
     padding-bottom: 3em;
     min-height: 85%;
