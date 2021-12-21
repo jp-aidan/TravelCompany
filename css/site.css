@@ -1,18 +1,21 @@
 *{
     margin: 0;
-}
+ }
 
 html,
-body {
+body 
+{
     height: 100%;
 }
 
-body {
+body 
+{
    font-family: Arial, Helvetica, sans-serif;
    background-color: #fff;
 }
 
-p {
+p 
+{
     margin: 0.5em 0 0.5em 0;
     text-align: justify;
 }
@@ -24,7 +27,8 @@ p {
     text-align: justify;
 }
 
-header {
+header 
+{
     display: block;
     position: fixed;
     top: 0;
@@ -35,30 +39,35 @@ header {
 }
 
 nav a:visited,
-nav a:link {
+nav a:link 
+{
     color: #D6AC56;
     text-decoration: none;
 }
 
-nav > ul {
+nav > ul 
+{
     display: inline;
     padding: 0;
 }
 
-nav > ul > li {
+nav > ul > li 
+{
     display: inline-block;
     list-style: none;
     margin: 0 5px 0 5px;
 }
 
-main {
+main 
+{
     display: block;
     padding-top: 3em;
     padding-bottom: 3em;
     min-height: 85%;
 }
 
-footer {
+footer 
+{
     padding: 15px;
     background-color: #A17E2D;
     color: white;
@@ -71,11 +80,13 @@ footer {
 }
 
 aside,
-article {
+article 
+{
     padding: 2em;
 }
 
-aside {
+aside 
+{
     text-align: center;
 }
 
@@ -83,96 +94,114 @@ article {
     width: 75%;
 }
 
-.columns {
+.columns 
+{
     display: flex;
 }
 /*to make it responsive*/
 
-.banner {
+.banner 
+{
     display: flex;
     max-width: 100%;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) 
+{
 
-    #bookform {
+    #bookform 
+    {
         width: 350px;
-     }
+    }
 
-    main {
+    main 
+    {
         display: flex;
     }
 
-    aside {
+    aside 
+    {
         margin-left: 2%;
     }
 
-    .columns-desktop {
+    .columns-desktop 
+    {
         display: flex;
     }
 
-    h1 {
+    h1 
+    {
         font-size: 3em;
         margin-top: 0.5em;
     }
   
-    .sub-title {
+    .sub-title 
+    {
         background-color: #fff;
         font-size: 1.5em;
         padding: 10px;
     }
-    /*Style booking page*/
-        .input-group{
-            margin-bottom: 20px;
-        }
+    /*Style the form on booking page*/
+    .input-group
+    {
+        margin-bottom: 20px;
+    }
 
-        .input-group input,
-        .input-group textarea,
-        .input-group select{
-            padding: 10px;
-            border: solid 1px #999;
-            border-radius: 2px;
-            width: 100%;
-        }
+    .input-group input,
+    .input-group textarea,
+    .input-group select
+    {
+        padding: 10px;
+        border: solid 1px #999;
+        border-radius: 2px;
+        width: 100%;
+    }
 
-        label {
-            font-weight: 600;
-        }
+    label 
+    {
+        font-weight: 600;
+    }
 
-        input[type="reset"] {
-            background: transparent;
-            border: 0;
-            text-decoration: underline;
-            cursor: pointer;
+    input[type="reset"] 
+    {
+        background: transparent;
+        border: 0;
+        text-decoration: underline;
+        cursor: pointer;
 
-        }
-        .input-group{
-            margin-bottom: 20px;
-        }
+    }
+    .input-group
+    {
+        margin-bottom: 20px;
+    }
 
-        .input-group input,
-        .input-group textarea,
-        .input-group select{
-            padding: 10px;
-            border: solid 1px #999;
-            border-radius: 2px;
-            width: 100%;
-        }
+    .input-group input,
+    .input-group textarea,
+    .input-group select
+    {
+        padding: 10px;
+        border: solid 1px #999;
+        border-radius: 2px;
+        width: 100%;
+    }
 
-        label {
-            font-weight: 600;
-        }
+    label 
+    {
+        font-weight: 600;
+    }
 
-        input[type="reset"] {
-            background: transparent;
-            border: 0;
-            text-decoration: underline;
-            cursor: pointer;
-        }
+    input[type="reset"] 
+    {
+        background: transparent;
+        border: 0;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 /* tours page style*/
 
-.tours {
+.tours 
+{
     width: 200px;
     padding: 10px;
     margin: 10px;
@@ -180,23 +209,28 @@ article {
     border: solid 1px #ccc;
 }
 
-.tours img {
+.tours img 
+{
    width: 100%; 
 }
 
-.tours .title {
+.tours .title 
+{
     font-weight: bold;
 }
 
-.tours .columns {
+.tours .columns 
+{
     width: 100%
 }
 
-.tours .price {
+.tours .price 
+{
     text-align: right;
 }
 
-.tours .columns div {
+.tours .columns div 
+{
     width: 50%;
 }
 
@@ -222,15 +256,17 @@ article {
     cursor: pointer;
 }
 
-/*font*/
-@font-face {
+/*font we couldnt make work*/
+@font-face 
+{
     font-family: 'celtic';
     src: url(fonts/Celtic.ttf);
     font-style: normal;
     font-weight: 200;
 }
 
-h1 {
+h1 
+{
     font-family: celtic;
     font-weight: 200;
 }

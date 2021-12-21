@@ -1,23 +1,27 @@
 *{
     margin: 0;
-}
+ }
 
 html,
-body {
+body 
+{
     height: 100%;
 }
 
-body {
+body 
+{
    font-family: cursive;
    background-color: #fff;
 }
 
-p {
+p 
+{
     margin: 0.5em 0 0.5em 0;
     text-align: center;
 }
 
-header {
+header 
+{
     display: block;
     position: fixed;
     top: 0;
@@ -28,23 +32,27 @@ header {
 }
 
 nav a:visited,
-nav a:link {
+nav a:link 
+{
     color: #D6AC56;
     text-decoration: none;
 }
 
-nav > ul {
+nav > ul 
+{
     display: inline;
     padding: 0;
 }
 
-nav > ul > li {
+nav > ul > li 
+{
     display: inline-block;
     list-style: none;
     margin: 0 5px 0 5px;
 }
 
-main {
+main 
+{
     display: block;
     background-image: url("images/background.jfif");
     padding-top: 3em;
@@ -52,7 +60,8 @@ main {
     min-height: 85%;
 }
 
-footer {
+footer 
+{
     padding: 15px;
     background-color: #024753;
     text-align: center;
@@ -61,40 +70,49 @@ footer {
 }
 
 aside,
-article {
+article 
+{
     padding: 2em;
 }
 
-aside {
+aside 
+{
     text-align: center;
 }
 
-article {
+article 
+{
     width: 75%;
 }
 
-.columns {
+.columns 
+{
     display: flex;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) 
+{
 
-    main {
+    main 
+    {
         display: flex;
     }
 
-    aside {
+    aside 
+    {
         margin-left: 2%;
     }
 
-    .columns-desktop {
+    .columns-desktop 
+    {
         display: flex;
     }
 }
 
 /* tours */
 
-.tours {
+.tours 
+{
     width: 200px;
     padding: 10px;
     margin: 10px;
@@ -102,19 +120,23 @@ article {
     border: solid 1px #ccc;
 }
 
-.tours img {
+.tours img 
+{
    width: 100%; 
 }
 
-.tours .title {
+.tours .title 
+{
     font-weight: bold;
 }
 
-.tours .columns {
+.tours .columns 
+{
     width: 100%
 }
 
-.tours .columns div {
+.tours .columns div 
+{
     width: 75%;
 }
 
