@@ -30,68 +30,67 @@
             <a id= "youtube" href= "https://www.youtube.com/watch?v=Dy1t2lusNnQ" target= "blank"><i class="fa fa-youtube-play" style="font-size:56px;color:red"></i></a>
         </aside>
         <article id="bookform">
-          <h1>Booking</h1>
+            <h1>Booking</h1>
             <!--HTML elements to show the tours the same mark up on tours page-->
-          <div class="tours">
-              <img src=""/>
-              <div class="columns">
-                  <div class="title"></div>
-                  <div class="price"></div>
-              </div>
-              <p class= "desc"></p>
-          </div>
-
-          <form name="book" id="book" action="https://formspree.io/f/mqknkoeb" onsubmit=" return validateBookForm(document.book.firstName.value, document.book.lastName.value, document.book.date.value, document.book.address.value, document.book.postalCode.value);" method="POST">
-            <!--field to take in the book information and send to the server-->
-            <input type="hidden" id="tours-book" name="tours-book">
-            <!--field to take the location and send to the server-->
-            <!--<input type="hidden" id="location" name="location">-->
-
-            <div class="input-group">
-                <div><label for="date">Select date</label></div>
-                <div><input type="date" name="date" id= "date" onchange=""/></div>
-            </div>
-
-            <div class="input-group">
-                <div><label for="firstName">First Name</label></div>
-                <div><input type="text" name="firstName" id= "firstName" /></div>
-            </div>
-
-            <div class="input-group">
-                <div><label for="lastName">Last Name</label></div>
-                <div><input type="text" name="lastName" id= "lastName" /></div>
-            </div>
-
-            <div class="input-group" onchange="validateAddress(document.book.address.value)">
-                <div><label for="address">Address</label></div>
-                <div><input type="text" name="address" id= "address"/></div>
-            </div>
-
-            <div class="input-group">
-                <div><label for="state">State</label></div>
-                <div><input type="text" name="state" id="state"/></div>
-            </div>
-
-            <div class="input-group">
-                <div><label for="postalCode">Zip code</label></div>
-                <div><input type="text" name="postalCode" id= "postalCode" onchange="validatePostalCode(document.book.postalCode.value)"/></div>
-            </div>
-
-            <div class="input-group">
-                <div><label for="comments">Comments</label></div>
-                <div>
-                    <textarea
-                     name="comments" 
-                     id= "comments"
-                     cols="30"
-                     rows="10"
-                     ></textarea>
+            <div class="tours">
+                <img src=""/>
+                <div class="columns">
+                    <div class="title"></div>
+                    <div class="price"></div>
                 </div>
+                <p class= "desc"></p>
             </div>
+            <form name="book" id="book" action="https://formspree.io/f/mqknkoeb" onsubmit=" return validateBookForm(document.book.firstName.value, document.book.lastName.value, document.book.date.value, document.book.address.value, document.book.postalCode.value);" method="POST">
+                <!--field to take in the book information and send to the server-->
+                <input type="hidden" id="tours-book" name="tours-book">
+                <!--field to take the location and send to the server-->
+                <!--<input type="hidden" id="location" name="location">-->
 
-            <input type="reset" value="Reset"/>
-            <input type="submit" class="indexButton" value="Book"/>
-        </form>  
+                <div class="input-group">
+                    <div><label for="date">Select date</label></div>
+                    <div><input type="date" name="date" id= "date" onchange=""/></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="firstName">First Name</label></div>
+                    <div><input type="text" name="firstName" id= "firstName" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="lastName">Last Name</label></div>
+                    <div><input type="text" name="lastName" id= "lastName" /></div>
+                </div>
+
+                <div class="input-group" onchange="validateAddress(document.book.address.value)">
+                    <div><label for="address">Address</label></div>
+                    <div><input type="text" name="address" id= "address"/></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="state">State</label></div>
+                    <div><input type="text" name="state" id="state"/></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="postalCode">Zip code</label></div>
+                    <div><input type="text" name="postalCode" id= "postalCode" onchange="validatePostalCode(document.book.postalCode.value)"/></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="comments">Comments</label></div>
+                    <div>
+                        <textarea
+                        name="comments" 
+                        id= "comments"
+                        cols="30"
+                        rows="10"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <input type="reset" value="Reset"/>
+                <input type="submit" class="indexButton" value="Book"/>
+            </form>  
         </article>
     </main>
         <footer>

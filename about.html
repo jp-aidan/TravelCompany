@@ -61,8 +61,8 @@
                     <img src="images/Aidan.JPG" alt="Aidan Carrigy" />
                     <div class="columns">
                         <div class="title">Aidan</div>
-                </div>
-                <p class="desc">Aidan is a native of Ireland and qualified as a National Tour Guide with Distinction 
+                    </div>
+                    <p class="desc">Aidan is a native of Ireland and qualified as a National Tour Guide with Distinction 
                     through Failte Ireland, which is the Irish governing tourism body, in 2013. 
                     He has over a decade of experience as a Tour Director leading tours around 
                     Scotland & Ireland for some of Ireland’s largest tour operators. He is an active 
@@ -73,7 +73,7 @@
                     <div class="columns">
                         <div class="title">JP</div>
                     </div>
-                <p class="desc">João Paulo or JP as he is known in the C & C Tours family is a native of 
+                    <p class="desc">João Paulo or JP as he is known in the C & C Tours family is a native of 
                     Brazil but has been living and working in Ireland for many years. Coming from a background in 
                     education and hospitality he has excellent communication skills and deals with the customer 
                     service side of the business. JP will handle all your travel queries and is also the tech guy 
@@ -88,30 +88,4 @@
             </p>
     </footer>
 </body>
-<script>
-    window.addEventListener("DOMContentLoaded", function(e) {
-        const orderButtons = document.querySelectorAll("button[data-order]");
-
-        orderButtons.forEach(function(button) {
-
-            button.addEventListener("click", function(e) {
-                const button = e.currentTarget;
-                const container = button.parentNode;
-
-                const order = {
-                    id: button.getAttribute("data-order"),
-                    title: container.querySelector(".title").innerText,
-                    price: container.querySelector(".price").innerText,
-                    desc: container.querySelector(".desc").innerText
-                };
-
-                localStorage.setItem("order", JSON.stringify(order));
-
-                const url = window.location.href.replace("tourss.html", "order.html");
-                window.location.href = url;
-
-            });
-        });
-    });
-</script>
 </html>

@@ -33,27 +33,27 @@
             <h1> Contact </h1>
             <p>We are always glad to hear from you!</p>
             <p>
-		<a href="mailto:aidan36andjp32@gmail.com">Send us an email </a>or leave a message.
+		        <a href="mailto:aidan36andjp32@gmail.com">Send us an email </a>or leave a message.
             </p> 
             <div id="log">
-            <form id="message" name= "message" action="https://formspree.io/f/mqknkoeb" onsubmit=" return validateEmail(document.message.email.value)" method="POST">
-                <table>
-                    <tr>
-			 <td><b>Name</b></td> 
-			 <td><input type="text" name="name" size="40" required/></td>
-		    </tr>
-                    <tr>
-                        <td><b> Email </b></td>
-			<td><input type="email" id="email" name="_replyto" required placeholder="Enter your Email" onchange="validateEmail(document.message.email.value)"/> </td>
-                    </tr>
-                    <tr>
-			<td><b>Message</b></td>
-			<td> <textarea rows="7" cols="40" name= "message" required></textarea>
-		    </tr>	
-                </table>
-                <input type="submit" id="submit" value="Submit" >
-            </form>
-        </div>
+                <form id="message" name= "message" action="https://formspree.io/f/mqknkoeb" onsubmit=" return validateEmail(document.message.email.value)" method="POST">
+                    <table>
+                        <tr>
+                            <td><b>Name</b></td> 
+                            <td><input type="text" name="name" size="40" required/></td>
+                        </tr>
+                        <tr>
+                            <td><b> Email </b></td>
+                            <td><input type="email" id="email" name="_replyto" required placeholder="Enter your Email" onchange="validateEmail(document.message.email.value)"/> </td>
+                        </tr>
+                        <tr>
+                            <td><b>Message</b></td>
+                            <td> <textarea rows="7" cols="40" name= "message" required></textarea>
+                        </tr>	
+                    </table>
+                    <input type="submit" id="submit" value="Submit" >
+                </form>
+            </div>
         </article>
     </main>
     <footer>
