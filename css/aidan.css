@@ -16,26 +16,19 @@ p {
     margin: 0.5em 0 0.5em 0;
 }
 
-.about
-{
-    margin: 0.5em 0 0.5em 0;
-    font-family:'Lato', sans-serif;
-    text-align: justify;
-}
-
 header {
     display: block;
     position: fixed;
     top: 0;
     left: 0;
     width:100%;
-    background-color: #202e48;
+    background-color: black;
     padding: 10px;
 }
 
 nav a:visited,
 nav a:link {
-    color: red;
+    color: yellow;
     text-decoration: none;
 }
 
