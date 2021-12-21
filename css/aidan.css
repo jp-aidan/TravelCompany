@@ -16,6 +16,13 @@ p {
     margin: 0.5em 0 0.5em 0;
 }
 
+.about
+{
+    margin: 0.5em 0 0.5em 0;
+    font-family:'Lato', sans-serif;
+    text-align: justify;
+}
+
 header {
     display: block;
     position: fixed;
